@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Mobile-specific styles */
+html, body {
+  overscroll-behavior-y: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+}
+
+/* Prevent text selection */
+* {
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+/* Allow text selection in inputs and textareas */
+input, textarea {
+  -webkit-user-select: text;
+  user-select: text;
+}
+
+/* Hide scrollbars but keep functionality */
+::-webkit-scrollbar {
+  display: none;
+}
+
+* {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Improve touch targets */
+button, a, input, select {
+  min-height: 44px;
+  min-width: 44px;
+}
+
+/* Fix iOS input zoom */
+input, select, textarea {
+  font-size: 16px !important;
+}
